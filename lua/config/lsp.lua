@@ -49,7 +49,7 @@ vim.diagnostic.config({
 	--		prefix = "",
 	--	},
 	underline = true,
-	virtual_lines = true,
+	virtual_lines = false,
 	float = {
 		border = "rounded",
 	},
@@ -59,6 +59,12 @@ vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
 			hint = { enable = true },
+			diagnostics = {
+				globals = {
+					"vim",
+					"require",
+				},
+			},
 		},
 	},
 })

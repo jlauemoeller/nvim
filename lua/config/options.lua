@@ -8,7 +8,7 @@ opt.relativenumber = true
 opt.cursorline = true
 
 -- tabs & indentation
-opt.tabstop = 2 
+opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
@@ -18,7 +18,6 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
-
 
 opt.signcolumn = "yes"
 opt.termguicolors = true
@@ -33,6 +32,3 @@ opt.clipboard:append("unnamedplus")
 -- window splits
 opt.splitright = true
 opt.splitbelow = true
-
-
-

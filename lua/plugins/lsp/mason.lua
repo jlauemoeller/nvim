@@ -8,7 +8,7 @@ return {
 				"cssls",
 				"css_variables",
 				"cssmodules_ls",
-				"lexical", -- elixir, also try elixir-ls, lexical, expert
+				"expert", -- elixir, also try elixir-ls, lexical, expert
 				"jsonls",
 				"lua_ls",
 				"markdown_oxide",
@@ -39,6 +39,9 @@ return {
 			},
 			"neovim/nvim-lspconfig",
 			opts = {
+				diagnostics = {
+					virtual_text = false,
+				},
 				servers = {
 					["*"] = {
 						keys = {
