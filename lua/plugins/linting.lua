@@ -11,6 +11,17 @@ return {
 			typescriptreact = { "eslint_d" },
 		}
 
+		lint.linters.eslint_d.cwd = function()
+			-- Find nearest directory containing eslint config
+			local root = vim.fs.find({ "eslint.config.mjs", "eslint.config.js", ".eslintrc.js", ".eslintrc.json" }, {
+				upward = true,
+				path = vim.api.nvim_buf_get_name(0),
+			})
+			if root[1] then
+				return vim.fn.fnamemodify(root[1], ":h")
+			end
+		end
+
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
