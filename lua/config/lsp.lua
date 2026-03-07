@@ -17,14 +17,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 		keymap.set("n", "dn", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
 		keymap.set("n", "dp", vim.diagnostic.goto_prev, { desc = "Go to prev diagnostic" })
-		keymap.set("n", "J", function()
+		keymap.set("n", "K", function()
 			vim.lsp.buf.hover({
 				border = "single",
 				max_height = 25,
 				max_width = 120,
 			})
 		end, { desc = "Show documentation for what's under the cursor" })
-		keymap.set("n", "dh", function()
+		keymap.set("n", "di", function()
 			vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 		end, { desc = "Toggle display of inline hints" })
 		keymap.set("n", "<leader>rs", ":LspRestart<CR>", { desc = "Restart LSP" })
@@ -44,10 +44,10 @@ vim.diagnostic.config({
 		},
 	},
 	update_in_insert = false,
-	--	virtual_text = {
-	--		spacing = 2,
-	--		prefix = "",
-	--	},
+	virtual_text = {
+		spacing = 2,
+		prefix = "",
+	},
 	underline = true,
 	virtual_lines = false,
 	float = {
