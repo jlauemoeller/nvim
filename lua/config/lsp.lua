@@ -107,6 +107,12 @@ vim.lsp.config("ts_ls", {
 	},
 })
 
+vim.lsp.config("cssls", {
+	settings = {
+		css = { lint = { unknownAtRules = "ignore" } },
+	},
+})
+
 local _border = "rounded" -- or "single", "double"
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
