@@ -32,3 +32,8 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to prev tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %", { desc = "Open current buffer in a new tab" })
+
+keymap.set("t", "<C-h>", [[<C-\><C-n><C-h>]], { desc = "Move left", noremap = true })
+keymap.set("t", "<C-j>", [[<C-\><C-n><C-j>]], { desc = "Move down", noremap = true })
+keymap.set("t", "<C-k>", [[<C-\><C-n><C-k>]], { desc = "Move up", noremap = true })
+keymap.set("t", "<C-l>", [[<C-\><C-n><C-l>]], { desc = "Move right", noremap = true })
