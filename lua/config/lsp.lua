@@ -19,7 +19,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap.set("n", "dp", vim.diagnostic.goto_prev, { desc = "Go to prev diagnostic" })
 		keymap.set("n", "K", function()
 			vim.lsp.buf.hover({
-				border = "single",
 				max_height = 25,
 				max_width = 120,
 			})
@@ -111,14 +110,4 @@ vim.lsp.config("cssls", {
 	settings = {
 		css = { lint = { unknownAtRules = "ignore" } },
 	},
-})
-
-local _border = "rounded" -- or "single", "double"
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-	border = _border,
-})
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-	border = _border,
 })

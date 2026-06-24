@@ -32,3 +32,6 @@ opt.clipboard:append("unnamedplus")
 -- window splits
 opt.splitright = true
 opt.splitbelow = true
+
+-- windows
+vim.o.winborder = "rounded"
