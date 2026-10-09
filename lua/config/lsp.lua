@@ -42,11 +42,11 @@ vim.diagnostic.config({
 			[severity.INFO] = " ",
 		},
 	},
-	update_in_insert = false,
-	virtual_text = {
-		spacing = 2,
-		prefix = "",
-	},
+	update_in_insert = true,
+	--virtual_text = {
+	--		spacing = 2,
+	--		prefix = "",
+	--	},
 	underline = true,
 	virtual_lines = false,
 	float = {
